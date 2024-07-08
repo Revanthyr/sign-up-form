@@ -1,3 +1,7 @@
+
+:root{
+    --right-padding:clamp(50px,17vw,25vw)
+}
 @font-face{
     font-family: "Norse Bold";
     src:url(Norse-Bold.otf)
@@ -6,18 +10,30 @@ body{
     display: flex;
     flex-direction: row;
     margin:0px;
+    height:100vh
 }
 .left-section{
     background-image: url(halie-west-25xggax4bSA-unsplash.jpg);
-    flex-grow: 0.31;
+   
     height:100vh;
     background-size:cover;
     background-repeat: no-repeat;
+    
+    flex-basis: 31vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .right-section{
-    background-color: blue;
-    flex-grow: 0.69;
+    background-color: rgb(243, 234, 209);
+    box-sizing: border-box;
     height:100vh;
+    flex-basis: 69vw;
+     display:flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    padding-top:12vh;
+    margin-bottom: 0vh; 
 }
 
 .header-container{
@@ -40,12 +56,97 @@ img{
     font-weight: 400;
 }
 .credits{
-    position: absolute;
-    top:97vh;
-    left:15vw;
-    color:white;
+    position: relative;
+     
+     text-align: center;
+        color:white;
     font-family: system-ui, sans-serif;
+    
 }
 a{
     color:white;
+}
+
+.right-section>p{
+    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif; 
+    font-size: 2rem;
+    font-weight: 600;
+    padding-left: 50px;
+    padding-right: var(--right-padding);
+    
+}
+#login{
+    font-size: 1.5rem;
+}
+.right-section a{
+    color:green;
+    text-decoration: none;
+
+}
+.form-container{
+    padding-right: var(--right-padding);
+    padding-left: 50px;
+    box-shadow: 0px 5px 5px rgba(0,0,0,40%);
+    background-color: white;
+    padding-bottom: 20px;
+}
+.button-container{
+    padding-left: 50px;
+    padding-right: var(--right-padding);
+}
+button{
+    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif; 
+    font-size: 1.5rem;
+    font-weight: 600;
+    color:white;
+    background-color: #596D48;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    width:280px;
+    height:60px;
+    border-radius: 10px;
+    border-width: 0;
+    box-shadow: 2px 3px rgba(0,0,0,20%);
+}
+h1{
+    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif; 
+    font-size: 2rem;
+    font-weight: 600;
+}
+form{
+    display:flex;
+    flex-wrap: wrap;
+    column-gap: 160px;
+    row-gap: 40px;
+   
+}
+form >div{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    width:320px;
+    height:30px;
+    border-radius: 3px;
+    border-color: #E5E7EB;
+    
+    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+    font-size: 1.3rem;
+
+    border-width: 1px;
+    border-style: solid;
+    
+}
+label{
+    font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif; 
+    color:#3b3b3a;
+    font-weight: 600;
+    letter-spacing: .1em;
+}
+input:focus{
+    border-color: rgb(19, 86, 230);
+    box-shadow: 5px 5px 5px rgba(0,0,0,30%);
+}
+input:invalid{
+    border-color:red;
 }
